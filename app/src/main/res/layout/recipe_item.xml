@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="240dp"
+android:id="@+id/recipeItem">
+
+
+<ImageView
+    android:id="@+id/dishimage"
+    android:layout_width="160dp"
+    android:layout_height="153dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:scaleType="centerInside"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.507" />
+
+    <TextView
+        android:id="@+id/recipetitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/carter_one"
+        android:minLines="1"
+        android:text="recipeTitle"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toTopOf="@id/recipesummary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dishimage"
+        app:layout_constraintTop_toTopOf="@id/dishimage" />
+
+    <TextView
+        android:id="@+id/recipesummary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="4dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:text="recipesummary"
+        android:textAppearance="@style/Description"
+        app:layout_constraintBottom_toBottomOf="@id/dishimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dishimage"
+        app:layout_constraintTop_toBottomOf="@id/recipetitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
